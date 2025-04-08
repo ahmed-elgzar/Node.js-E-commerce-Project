@@ -5,10 +5,8 @@ This is a backend project for a simple E-commerce platform built using **Node.js
 ## ✅ Features Implemented
 
 - 🔧 Basic project structure with organized folders (config, controllers, models, routes)
-- 📁 Category CRUD (Create, Read, Update, Delete) operations with:
-  - Input validation
-  - Error handling
-  - RESTful routes
+- 📁 Category CRUD (Create, Read, Update, Delete) operations
+- ⚠️ Centralized error handling with custom error responses
 
 ## 📁 Project Structure
 
@@ -24,3 +22,6 @@ This is a backend project for a simple E-commerce platform built using **Node.js
 - Node.js
 - Express.js
 - MongoDB (via Mongoose)
+- dotenv
+- nodemon
+- Custom middleware for error handling
