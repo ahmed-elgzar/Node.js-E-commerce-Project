@@ -31,4 +31,16 @@ app.all("*", (req, res, next) => {
 app.use(globalError);
 const port = process.env.PORT || 3000;
 app.get("/", (req, res) => res.send("Hello World! 1"));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+const server = app.listen(port, () =>
+  console.log(`Example app listening on port ${port}!`)
+);
+
+// Events => list => callback(err)
+
+process.on("unhandledRejection", (err) => {
+  console.error(`UnhandleRejection Errors: ${err.name} | ${err.message}`);
+  server.close(() => {
+    console.error("shutting down....");
+    process.exit(1);
+  });
+});
