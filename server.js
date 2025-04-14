@@ -35,7 +35,7 @@ const server = app.listen(port, () =>
   console.log(`Example app listening on port ${port}!`)
 );
 
-// Events => list => callback(err)
+// Handle rejection outside express
 
 process.on("unhandledRejection", (err) => {
   console.error(`UnhandleRejection Errors: ${err.name} | ${err.message}`);
