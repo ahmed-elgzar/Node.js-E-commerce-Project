@@ -12,11 +12,11 @@ This is a backend project for a simple E-commerce platform built using **Node.js
 
 ## 📁 Project Structure
 
-├── config/ # Configuration files (e.g. DB connection)
-├── controllers/ # Logic for handling requests
-├── models/ # Mongoose schemas
-├── routes/ # Express route handlers
-├── server.js # Entry point of the app
+├── config/ # Configuration files (e.g. DB connection)<br>
+├── controllers/ # Logic for handling requests<br>
+├── models/ # Mongoose schemas<br>
+├── routes/ # Express route handlers<br>
+├── server.js # Entry point of the app<br>
 ├── package.json # Project dependencies and scripts
 
 ## 🛠️ Technologies Used
