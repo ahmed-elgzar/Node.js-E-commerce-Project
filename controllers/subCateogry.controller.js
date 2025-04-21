@@ -4,6 +4,12 @@ import subCategoryModel from "../models/subCategoryModel.js";
 
 import ApiError from "../utils/apiError.js";
 
+export const createFilterObj = (req, res, next) => {
+  let filterObject = {};
+  if (req.params.categoryId) filterObject = { category: req.params.categoryId };
+  req.filterObject = filterObject;
+  next();
+};
 /**
  *
  * @desc    Get list of subCategories
@@ -14,8 +20,9 @@ export const getSubCategories = asyncHandler(async (req, res) => {
   const page = req.query.page * 1 || 1;
   const limit = req.query.limit * 1 || 5;
   const skip = (page - 1) * limit;
+
   const subCategories = await subCategoryModel
-    .find({})
+    .find(req.filterObject)
     .skip(skip)
     .limit(limit)
     .populate({ path: "category", select: "name -_id" });
@@ -39,6 +46,16 @@ export const getSubCategory = asyncHandler(async (req, res, next) => {
   }
   res.status(200).json({ data: subCategory });
 });
+
+/**
+ *
+ * @desc Set Category Id to body
+ */
+export const setCategoryIdToBody = (req, res, next) => {
+  // Nested route
+  if (!req.body.category) req.body.category = req.params.categoryId;
+  next();
+};
 /**
  *
  * @desc    Create subCategory
