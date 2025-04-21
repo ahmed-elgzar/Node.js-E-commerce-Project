@@ -19,7 +19,8 @@ This is a backend project for a simple E-commerce platform built using **Node.js
 ├── controllers/ # Logic for handling requests<br>
 ├── models/ # Mongoose schemas (Category, SubCategory, etc.)<br>
 ├── routes/ # Express route handlers<br>
-├── utils/ │ └── validators/ # Request validation schemas using express-validator<br>
+├── utils/<br>
+│ └── validators/ # Request validation schemas using express-validator<br>
 ├── middlewares/ # Error handling and custom middleware<br>
 ├── .eslintrc.json # ESLint configuration for code style consistency<br>
 ├── server.js # Entry point of the app<br>
