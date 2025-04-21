@@ -7,9 +7,9 @@ This is a backend project for a simple E-commerce platform built using **Node.js
 - 🔧 Modular project structure with Express & Mongoose
 - 📁 Full Category CRUD with validation (name, id)
 - 🧩 Subcategory module with full CRUD support
-- 📏 Subcategory input validation using express-validator
-- 🛡️ Request validation using express-validator
-- ⚠️ Centralized error handling with custom error class
+- 🏷️ Brand module with full CRUD operations
+- 📏 Input validation using express-validator
+- 🛡️ Centralized error handling with custom error class
 - 🔄 Global process error handling (e.g., unhandledRejection)
 - 🧹 ESLint integration for consistent code style
 
@@ -34,4 +34,5 @@ This is a backend project for a simple E-commerce platform built using **Node.js
 - MongoDB (via Mongoose)
 - dotenv
 - nodemon
-- Custom middleware for error handling
+- express-validator
+- ESLint

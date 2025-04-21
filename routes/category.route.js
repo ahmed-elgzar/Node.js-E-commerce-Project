@@ -19,10 +19,14 @@ const router = express.Router();
 
 router.use("/:categoryId/subcategories", subCategoryRoute);
 
-router.get("/", getCategories);
-router.get("/:id", getCategoryValidator, getCategory);
-router.post("/", createCategoryValidator, createCategory);
-router.put("/:id", updateCategoryValidator, updateCategory);
-router.delete("/:id", deleteCategoryValidator, deleteCategory);
+router
+  .route("/")
+  .get(getCategories)
+  .post(createCategoryValidator, createCategory);
+router
+  .route("/:id")
+  .get(getCategoryValidator, getCategory)
+  .put(updateCategoryValidator, updateCategory)
+  .delete(deleteCategoryValidator, deleteCategory);
 
 export default router;
