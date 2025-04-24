@@ -11,7 +11,7 @@ import {
   getbrand,
   getBrands,
   updateBrand,
-} from "../controllers/category.controller copy.js";
+} from "../controllers/brand.controller.js";
 
 const router = express.Router();
 

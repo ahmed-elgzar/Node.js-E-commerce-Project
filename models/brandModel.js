@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// category schema
+// brand schema
 const brandSchema = new mongoose.Schema(
   {
     name: {
